@@ -1,0 +1,30 @@
+class Student {
+    void introduction() {
+        System.out.println("I am a student");
+    }
+}
+
+class SchoolStudent extends Student {
+    
+    void introduction() {
+        System.out.println("I study in school");
+    }
+}
+
+class UniversityStudent extends Student {
+    
+    void introduction() {
+        System.out.println("I study in university");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new SchoolStudent();
+        Student s2 = new UniversityStudent();
+
+        s1.introduction();
+        s2.introduction();
+    }
+}

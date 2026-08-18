@@ -1,0 +1,49 @@
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+
+class Student {
+    String name;
+    int id;
+
+    
+    Student(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+
+            
+            Student s1 = new Student("Rahim", 101);
+
+            
+            FileWriter writer = new FileWriter("student.txt");
+
+            writer.write("Name: " + s1.name + "\n");
+            writer.write("ID: " + s1.id);
+
+            writer.close();
+
+            System.out.println("Student data written successfully.\n");
+
+            
+            FileReader reader = new FileReader("student.txt");
+
+            int ch;
+
+            while ((ch = reader.read()) != -1) {
+                System.out.print((char) ch);
+            }
+
+            reader.close();
+
+        } catch (IOException e) {
+            System.out.println("Error occurred.");
+        }
+    }
+}

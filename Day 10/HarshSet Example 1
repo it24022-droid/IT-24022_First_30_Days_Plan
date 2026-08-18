@@ -1,0 +1,49 @@
+import java.util.HashSet;
+
+class Car {
+    String brand;
+    int speed;
+
+    
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    
+    void showCar() {
+        System.out.println("Brand: " + brand + ", Speed: " + speed);
+    }
+
+    
+    public int hashCode() {
+        return brand.hashCode() + speed;
+    }
+
+    
+    public boolean equals(Object obj) {
+        Car c = (Car) obj;
+        return this.brand.equals(c.brand) && this.speed == c.speed;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+        HashSet<Car> cars = new HashSet<>();
+
+        
+        cars.add(new Car("Toyota", 120));
+        cars.add(new Car("BMW", 200));
+        cars.add(new Car("Tesla", 180));
+
+        
+        cars.add(new Car("BMW", 200));
+
+        
+        for (Car c : cars) {
+            c.showCar();
+        }
+    }
+}

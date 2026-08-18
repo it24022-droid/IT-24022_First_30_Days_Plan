@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+class Student {
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println("Student Name: " + name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+        ArrayList<Student> students = new ArrayList<>();
+
+        students.add(new Student("Rahim"));
+        students.add(new Student("Karim"));
+        students.add(new Student("Sakib"));
+
+        
+        for (Student student : students) {
+            student.display();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class StudentDateParsing {
+    public static void main(String[] args) {
+        String studentDate = "20/06/2026";
+        DateTimeFormatter format =
+                DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date =
+                LocalDate.parse(studentDate, format);
+
+        System.out.println("Student Admission Date");
+        System.out.println("Parsed Date: " + date);
+    }
+}

@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class IT24035 {
+    public static void main(String[] args) {
+
+        
+        ArrayList<String> cars = new ArrayList<>();
+
+        
+        cars.add("BMW");
+        cars.add("Toyota");
+        cars.add("Tesla");
+
+        
+        System.out.println("Cars List: " + cars);
+
+        
+        System.out.println("First Car: " + cars.get(0));
+
+        
+        cars.set(1, "Honda");
+
+        
+        cars.remove(2);
+
+        
+        System.out.println("Updated List: " + cars);
+
+        
+        System.out.println("All Cars:");
+        for(String car : cars) {
+            System.out.println(car);
+        }
+    }
+}

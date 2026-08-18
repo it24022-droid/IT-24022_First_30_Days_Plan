@@ -1,0 +1,38 @@
+abstract class Student {
+
+    
+    abstract void study();
+
+    
+    void attendClass() {
+        System.out.println("Student attends class");
+    }
+}
+
+class SchoolStudent extends Student {
+    
+    void study() {
+        System.out.println("School student studies school subjects");
+    }
+}
+
+class UniversityStudent extends Student {
+    
+    void study() {
+        System.out.println("University student studies research topics");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new SchoolStudent();
+        Student s2 = new UniversityStudent();
+
+        s1.study();
+        s1.attendClass();
+
+        s2.study();
+        s2.attendClass();
+    }
+}

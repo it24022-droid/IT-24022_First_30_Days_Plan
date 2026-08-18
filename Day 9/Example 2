@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+
+public class IT24035 {
+    public static void main(String[] args) {
+
+        
+        LinkedList<String> students = new LinkedList<>();
+
+        
+        students.add("Rahim");
+        students.add("Karim");
+        students.add("Sakib");
+
+        
+        students.addFirst("Mim");
+        students.addLast("Nayeem");
+
+       
+        System.out.println("Student List: " + students);
+
+        
+        System.out.println("First Student: " + students.getFirst());
+
+        
+        students.remove("Karim");
+
+        
+        System.out.println("Updated List: " + students);
+
+        
+        System.out.println("All Students:");
+        for(String name : students) {
+            System.out.println(name);
+        }
+    }
+}

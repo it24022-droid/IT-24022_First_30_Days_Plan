@@ -1,0 +1,49 @@
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+
+class Car {
+    String brand;
+    int speed;
+
+    
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+
+            
+            Car c1 = new Car("Toyota", 120);
+
+            
+            FileWriter writer = new FileWriter("car.txt");
+
+            writer.write("Brand: " + c1.brand + "\n");
+            writer.write("Speed: " + c1.speed);
+
+            writer.close();
+
+            System.out.println("Car data written successfully.\n");
+
+            
+            FileReader reader = new FileReader("car.txt");
+
+            int ch;
+
+            while ((ch = reader.read()) != -1) {
+                System.out.print((char) ch);
+            }
+
+            reader.close();
+
+        } catch (IOException e) {
+            System.out.println("Error occurred.");
+        }
+    }
+}

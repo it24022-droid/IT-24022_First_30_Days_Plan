@@ -1,0 +1,24 @@
+class Student {
+
+    String studentName = "Rahim";
+
+    
+    class IDCard {
+        void showID() {
+            System.out.println("Student Name: " + studentName);
+            System.out.println("ID Card Generated");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        
+        Student.IDCard card = student.new IDCard();
+
+        card.showID();
+    }
+}

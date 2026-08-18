@@ -1,0 +1,34 @@
+import java.util.Queue;
+import java.util.LinkedList;
+
+class Car {
+    String brand;
+
+    
+    Car(String brand) {
+        this.brand = brand;
+    }
+
+    void showCar() {
+        System.out.println("Car Brand: " + brand);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+        Queue<Car> cars = new LinkedList<>();
+
+        
+        cars.add(new Car("Toyota"));
+        cars.add(new Car("BMW"));
+        cars.add(new Car("Tesla"));
+
+        
+        while (!cars.isEmpty()) {
+            Car c = cars.poll();
+            c.showCar();
+        }
+    }
+}

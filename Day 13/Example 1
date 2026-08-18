@@ -1,0 +1,40 @@
+import java.util.HashMap;
+
+class Car {
+    String brand;
+    int price;
+
+    
+    Car(String brand, int price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
+    void showCar() {
+        System.out.println("Brand: " + brand + ", Price: " + price);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+        HashMap<Integer, Car> showroom = new HashMap<>();
+
+       
+        showroom.put(1, new Car("Toyota", 2500000));
+        showroom.put(2, new Car("BMW", 8000000));
+        showroom.put(3, new Car("Tesla", 6000000));
+
+        
+        for (Integer key : showroom.keySet()) {
+
+            System.out.println("Car ID: " + key);
+
+            Car c = showroom.get(key);
+            c.showCar();
+
+            System.out.println();
+        }
+    }
+}
